@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[\App\Http\Controllers\AtelierController::class,'index'])->name('index');
-
 Route::get('/ateliers',[\App\Http\Controllers\AtelierController::class,'index'])->name('atelier.index');
 Route::get('/ateliers/{atelier}',[\App\Http\Controllers\AtelierController::class,'show'])->name('atelier.show');
+Route::get('/produits',[\App\Http\Controllers\ProduitController::class,'index'])->name('produit.index');
+
 
 Route::get('/confidentialite',function(){
  return view ('confidentialite');
